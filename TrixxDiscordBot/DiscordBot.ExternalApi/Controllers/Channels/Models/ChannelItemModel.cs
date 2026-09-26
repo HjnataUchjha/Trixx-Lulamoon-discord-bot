@@ -1,14 +1,16 @@
-﻿using Discord;
-using DiscordBot.Api.Converters;
+using Discord;
+using DiscordBot.ExternalApi.Converters;
 using System.Text.Json.Serialization;
 
-namespace DiscordBot.Api.Controllers.Channels.Models
+namespace DiscordBot.ExternalApi.Controllers.Channels.Models
 {
     public class ChannelItemModel
     {
-        [JsonConverter(typeof(JsonStringConverter))]
+        [JsonConverter(typeof(JsonULongToStringConverter))]
         public ulong Id { get; set; }
+
         public string Name { get; set; } = string.Empty;
+
         [JsonConverter(typeof(JsonStringEnumConverter))]
         public ChannelType Type { get; set; }
 

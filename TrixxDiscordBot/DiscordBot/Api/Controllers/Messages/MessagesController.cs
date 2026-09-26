@@ -2,10 +2,11 @@
 using Discord;
 using Microsoft.AspNetCore.Mvc;
 using DiscordBot.Exceptions;
+using DiscordBot.ExternalApi.Controllers.Messages;
 
 namespace DiscordBot.Api.Controllers.Messages
 {
-    public class MessagesController(DiscordSocketClient client) : BaseController
+    public class MessagesController(DiscordSocketClient client) : BaseController, IMessagesController
     {
         private readonly DiscordSocketClient _client = client;
 

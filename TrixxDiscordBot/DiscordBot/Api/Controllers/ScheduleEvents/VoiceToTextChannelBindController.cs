@@ -1,12 +1,13 @@
-﻿using DiscordBot.Api.Controllers.ScheduleEvents.Models;
-using DiscordBot.MongoDb;
+﻿using DiscordBot.MongoDb;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
+using DiscordBot.ExternalApi.Controllers.ScheduleEvents;
+using DiscordBot.ExternalApi.Controllers.ScheduleEvents.Models;
 
 namespace DiscordBot.Api.Controllers.ScheduleEvents
 {
     public class VoiceToTextChannelBindController(
-        MongoDbContext mongoDbContext) : BaseController
+        MongoDbContext mongoDbContext) : BaseController, IVoiceToTextChannelBindController
     {
         private readonly MongoDbContext _mongoDbContext = mongoDbContext;
 

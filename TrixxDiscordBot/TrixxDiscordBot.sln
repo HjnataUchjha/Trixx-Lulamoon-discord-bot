@@ -31,6 +31,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DiscordBot", "DiscordBot", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiscordBot", "DiscordBot\DiscordBot.csproj", "{B67609AC-25D7-4D16-8628-C6C545C73E97}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscordBot.ExternalApi", "DiscordBot.ExternalApi\DiscordBot.ExternalApi.csproj", "{FECAB482-3C96-40C6-BA72-967080CF187B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,10 @@ Global
 		{B67609AC-25D7-4D16-8628-C6C545C73E97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B67609AC-25D7-4D16-8628-C6C545C73E97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B67609AC-25D7-4D16-8628-C6C545C73E97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FECAB482-3C96-40C6-BA72-967080CF187B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FECAB482-3C96-40C6-BA72-967080CF187B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FECAB482-3C96-40C6-BA72-967080CF187B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FECAB482-3C96-40C6-BA72-967080CF187B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,6 +101,7 @@ Global
 		{6E3AC739-878C-4666-BBAB-7BC3E0ADAC35} = {83BCF8CA-B422-4EF9-9DCB-3E38058CE919}
 		{CB100225-5011-4C05-9EC2-89F275D896DC} = {52B79106-4CB5-41D8-A939-58FD849C3DFD}
 		{B67609AC-25D7-4D16-8628-C6C545C73E97} = {AC000502-4F54-41B9-9677-1A055371E2D2}
+		{FECAB482-3C96-40C6-BA72-967080CF187B} = {AC000502-4F54-41B9-9677-1A055371E2D2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A047ED52-B0DB-4BAC-99DD-60B2E39BBAB8}

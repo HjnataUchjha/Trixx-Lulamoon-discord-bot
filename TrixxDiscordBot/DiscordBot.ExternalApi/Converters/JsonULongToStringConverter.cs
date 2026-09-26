@@ -1,9 +1,9 @@
-﻿using System.Text.Json;
+using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace DiscordBot.Api.Converters
+namespace DiscordBot.ExternalApi.Converters
 {
-    public class JsonStringConverter : JsonConverter<ulong>
+    public class JsonULongToStringConverter : JsonConverter<ulong>
     {
         public override ulong Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
             => ulong.Parse(reader.GetString()!);

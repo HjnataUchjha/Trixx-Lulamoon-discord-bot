@@ -1,12 +1,13 @@
-﻿using DiscordBot.Api.Converters;
 using System.Text.Json.Serialization;
+using DiscordBot.ExternalApi.Converters;
 
-namespace DiscordBot.Api.Controllers.Channels.Models
+namespace DiscordBot.ExternalApi.Controllers.Channels.Models
 {
     public class ChannelsCacheItemModel
     {
-        [JsonConverter(typeof(JsonStringConverter))]
+        [JsonConverter(typeof(JsonULongToStringConverter))]
         public ulong ChannelId { get; set; }
+
         public string Name { get; set; } = string.Empty;
     }
 }

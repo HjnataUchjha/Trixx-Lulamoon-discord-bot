@@ -1,11 +1,12 @@
 ﻿using Discord;
 using Discord.WebSocket;
-using DiscordBot.Api.Controllers.Channels.Models;
+using DiscordBot.ExternalApi.Controllers.Channels;
+using DiscordBot.ExternalApi.Controllers.Channels.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DiscordBot.Api.Controllers.Channels
 {
-    public class ChannelsController(DiscordSocketClient client) : BaseController
+    public class ChannelsController(DiscordSocketClient client) : BaseController, IChannelsController
     {
         private readonly DiscordSocketClient _client = client;
 

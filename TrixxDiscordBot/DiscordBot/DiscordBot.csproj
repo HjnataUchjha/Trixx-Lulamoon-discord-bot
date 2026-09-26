@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Api\Controllers\ChannelsCache\Models\" />
+    <ProjectReference Include="..\DiscordBot.ExternalApi\DiscordBot.ExternalApi.csproj" />
   </ItemGroup>
 
 </Project>

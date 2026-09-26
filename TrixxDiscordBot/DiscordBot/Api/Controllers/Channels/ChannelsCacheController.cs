@@ -1,14 +1,15 @@
 ﻿using Discord.WebSocket;
-using DiscordBot.Api.Controllers.Channels.Models;
 using DiscordBot.MongoDb;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
+using DiscordBot.ExternalApi.Controllers.Channels;
+using DiscordBot.ExternalApi.Controllers.Channels.Models;
 
 namespace DiscordBot.Api.Controllers.Channels
 {
     public class ChannelsCacheController(
         MongoDbContext mongoDbContext,
-        DiscordSocketClient client) : BaseController
+        DiscordSocketClient client) : BaseController, IChannelsCacheController
     {
         private readonly MongoDbContext _mongoDbContext = mongoDbContext;
         private readonly DiscordSocketClient _client = client;

@@ -1,4 +1,4 @@
-﻿namespace DiscordBot.Api.Controllers.ScheduleEvents.Models
+namespace DiscordBot.ExternalApi.Controllers.ScheduleEvents.Models
 {
     public class VoiceToTextChannelsUpdateModel
     {
