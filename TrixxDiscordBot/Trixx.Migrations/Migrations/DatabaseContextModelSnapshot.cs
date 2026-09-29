@@ -168,7 +168,7 @@ namespace Trixx.Migrations.Migrations
                             IsReadOnly = true,
                             Name = "Администратор",
                             NormalizedName = "АДМИНИСТРАТОР",
-                            Permissions = "[0,1,2,3,4,5,6,7,8,9,10,11,12]"
+                            Permissions = "[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]"
                         });
                 });
 
@@ -255,7 +255,7 @@ namespace Trixx.Migrations.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "TRIXX",
                             NormalizedUserName = "TRIXX",
-                            PasswordHash = "AQAAAAIAAYagAAAAEECR6Iq2SvBm1jWxkSfxxrqXT0L6soUTzOxpgF39y2DsincADVSe0fDRSR7ue8PppA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEIEDNq/IXXCKa4Uv75QAC/RwnJomKAU43DdCdnrKuxYg6aO1RR7H96ZlDZI8kI0j2g==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "43142260-d8fe-47f3-abbe-40cdcf406f97",
                             TwoFactorEnabled = false,

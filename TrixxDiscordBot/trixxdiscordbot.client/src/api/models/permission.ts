@@ -15,5 +15,7 @@ export enum Permission {
   TrixxRoles_Read = 'TrixxRoles_Read',
   TrixxRoles_Edit = 'TrixxRoles_Edit',
   CartoonsPack_Read = 'CartoonsPack_Read',
-  CartoonsPack_Edit = 'CartoonsPack_Edit'
+  CartoonsPack_Edit = 'CartoonsPack_Edit',
+  DiscordBotSingleSettings_Read = 'DiscordBotSingleSettings_Read',
+  DiscordBotSingleSettings_Edit = 'DiscordBotSingleSettings_Edit'
 }

@@ -38,6 +38,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('./cartoons-packs/cartoons-packs.module').then((m) => m.CartoonsPacksModule),
       },
+      {
+        path: 'discord-bot',
+        loadChildren: () =>
+          import('./discord-bot/discord-bot.module').then((m) => m.DiscordBotModule),
+      },
     ],
   },
 ];

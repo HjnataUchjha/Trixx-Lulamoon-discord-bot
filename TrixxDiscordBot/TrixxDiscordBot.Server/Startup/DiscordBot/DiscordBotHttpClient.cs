@@ -4,6 +4,7 @@ using System.Text.Json.Serialization;
 using Trixx.Common.Exceptions;
 using DiscordBot.ExternalApi.Controllers.Channels.Models;
 using DiscordBot.ExternalApi.Controllers.ScheduleEvents.Models;
+using DiscordBot.ExternalApi.Controllers.SingleSettings.Models;
 
 namespace TrixxDiscordBot.Server.Startup.DiscordBot
 {
@@ -12,6 +13,7 @@ namespace TrixxDiscordBot.Server.Startup.DiscordBot
         private static readonly JsonSerializerOptions JsonOptions = new()
         {
             PropertyNameCaseInsensitive = true,
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
             Converters =
             {
                 new JsonStringEnumConverter(),
@@ -59,6 +61,21 @@ namespace TrixxDiscordBot.Server.Startup.DiscordBot
             CancellationToken cancellationToken = default)
         {
             using var response = await _httpClient.PostAsJsonAsync("api/discord/VoiceToTextChannelBind/replace", binds, JsonOptions, cancellationToken);
+            await EnsureSuccessAsync(response, cancellationToken);
+        }
+
+        public async Task<IReadOnlyList<SingleSettingItemModel>> GetSettingsAsync(CancellationToken cancellationToken = default)
+        {
+            using var response = await _httpClient.GetAsync("api/discord/SingleSettings", cancellationToken);
+            await EnsureSuccessAsync(response, cancellationToken);
+            return await response.Content.ReadFromJsonAsync<List<SingleSettingItemModel>>(JsonOptions, cancellationToken) ?? [];
+        }
+
+        public async Task ReplaceSettingsAsync(
+            IReadOnlyList<SingleSettingItemModel> settings,
+            CancellationToken cancellationToken = default)
+        {
+            using var response = await _httpClient.PostAsJsonAsync("api/discord/SingleSettings/replace", settings, JsonOptions, cancellationToken);
             await EnsureSuccessAsync(response, cancellationToken);
         }
 

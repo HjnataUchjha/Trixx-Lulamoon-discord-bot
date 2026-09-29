@@ -1,5 +1,6 @@
 ﻿using DiscordBot.MongoDb.Models;
 using DiscordBot.MongoDb.Models.ChannelsCache;
+using DiscordBot.MongoDb.Models.SingleSettings;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
@@ -14,5 +15,8 @@ namespace DiscordBot.MongoDb
 
         public IMongoCollection<VoiceToTextChannel> VoiceToTextChannels =>
             _database.GetCollection<VoiceToTextChannel>(nameof(VoiceToTextChannel));
+
+        public IMongoCollection<SingleSetting> SingleSettings =>
+            _database.GetCollection<SingleSetting>(nameof(SingleSetting));
     }
 }

@@ -1,0 +1,25 @@
+<nb-card [appSpinner]="loading$ | async">
+    <nb-card-header>
+        <h3>
+            {{ title }}
+        </h3>
+    </nb-card-header>
+    <nb-card-body>
+        <form [formGroup]="form">
+            <app-trixx-form-field *ngFor="let type of settingTypes" [label]="type">
+                <input
+                    #appFormField
+                    #appColorize
+                    type="text"
+                    [formControlName]="type"
+                    [placeholder]="type"
+                    nbInput
+                    fullWidth
+                >
+            </app-trixx-form-field>
+        </form>
+    </nb-card-body>
+    <nb-card-footer>
+        <button nbButton [disabled]="form.invalid" (click)="save()" status="success">Сохранить</button>
+    </nb-card-footer>
+</nb-card>

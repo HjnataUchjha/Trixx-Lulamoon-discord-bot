@@ -8,6 +8,7 @@ using DiscordBot.MongoDb;
 using DiscordBot.Utils;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 IConfiguration configuration = builder.Configuration;
@@ -55,7 +56,12 @@ builder.Services
     .AddSingleton<CommandHandler>()
     .AddSingleton<InteractionHandler>();
 
-builder.Services.AddControllers();
+builder.Services
+    .AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    });
 
 var app = builder.Build();
 

@@ -50,4 +50,17 @@ export const MENU_ITEMS: () => TrixxMenuItem[] = () => [
     home: true,
     permission: Permission.CartoonsPack_Read,
   },
+  {
+    title: 'Дискорд бот',
+    icon: 'message-circle-outline',
+    children: [
+      {
+        title: Workscreen.DiscordBotSingleSettings,
+        icon: 'settings-outline',
+        link: 'discord-bot/single-settings',
+        home: true,
+        permission: Permission.DiscordBotSingleSettings_Read,
+      },
+    ],
+  },
 ];

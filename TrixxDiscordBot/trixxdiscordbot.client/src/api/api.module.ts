@@ -11,6 +11,7 @@ import { CartoonPackService } from './services/cartoon-pack.service';
 import { CartoonsService } from './services/cartoons.service';
 import { MainPageService } from './services/main-page.service';
 import { RolesService } from './services/roles.service';
+import { SingleSettingsService } from './services/single-settings.service';
 import { StudiosService } from './services/studios.service';
 import { UserProfileService } from './services/user-profile.service';
 import { UsersService } from './services/users.service';
@@ -28,6 +29,7 @@ import { UsersService } from './services/users.service';
     CartoonsService,
     MainPageService,
     RolesService,
+    SingleSettingsService,
     StudiosService,
     UserProfileService,
     UsersService,

@@ -35,5 +35,10 @@ namespace Trixx.Database.Enums
         CartoonsPack_Read = 11,
         [PermissionMapping(Workscreen.CartoonsPack, CommonPermission.Edit)]
         CartoonsPack_Edit = 12,
+
+        [PermissionMapping(Workscreen.DiscordBotSingleSettings, CommonPermission.Read)]
+        DiscordBotSingleSettings_Read = 13,
+        [PermissionMapping(Workscreen.DiscordBotSingleSettings, CommonPermission.Edit)]
+        DiscordBotSingleSettings_Edit = 14
     }
 }

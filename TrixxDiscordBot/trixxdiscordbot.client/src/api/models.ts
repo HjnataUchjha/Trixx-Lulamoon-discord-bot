@@ -24,6 +24,8 @@ export type { RoleEditModel } from './models/role-edit-model';
 export type { RoleListItem } from './models/role-list-item';
 export type { RoleModel } from './models/role-model';
 export type { SelectItem } from './models/select-item';
+export type { SingleSettingItemModel } from './models/single-setting-item-model';
+export { SingleSettingType } from './models/single-setting-type';
 export type { StudiosListSelectItem } from './models/studios-list-select-item';
 export type { StudioUpdateModel } from './models/studio-update-model';
 export type { UpdateUserModel } from './models/update-user-model';

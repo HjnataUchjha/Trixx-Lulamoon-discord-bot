@@ -21,5 +21,8 @@ namespace Trixx.Database.Enums
 
         [EnumMember(Value = "Паки")]
         CartoonsPack = 6,
+
+        [EnumMember(Value = "Настройки бота")]
+        DiscordBotSingleSettings = 7,
     }   
 }
